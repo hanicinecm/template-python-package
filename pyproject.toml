@@ -18,3 +18,9 @@ deps =
     pandas_high: pandas
 commands = pytest
 """
+
+[tool.coverage.run]
+omit = ["tests/*", "src/pkg_template/__init__.py"]
+
+[tool.coverage.html]
+directory = "htmlcov"
