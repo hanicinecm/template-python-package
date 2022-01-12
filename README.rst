@@ -2,6 +2,7 @@
 Template Python Package
 ***********************
 
+
 Description of the Repository:
 ==============================
 
@@ -22,10 +23,10 @@ to ``master`` branch the following:
 * Check if the project code is ``black``-formatted.
 * Run all the tests with ``pytest`` and ``tox`` on a matrix of supported python versions
   and dependency versions.
-* If the commit is tagged, publish the package to PyPI
-  * TestPyPI is used in this template.
-  * The package only gets published if ``twine check dist/*`` executes successfully.
-  * The package only gets published if tests run successfully and the code is formatted.
+* If the commit is tagged, publish the package to PyPI.
+* TestPyPI is used in this template.
+* The package only gets published if ``twine check dist/*`` executes successfully.
+* The package only gets published if tests run successfully and the code is formatted.
 
 
 README Template:
