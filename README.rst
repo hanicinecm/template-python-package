@@ -61,9 +61,15 @@ Examples:
 
 .. code-block:: pycon
 
-
     >>> print("hello, world!")
     hello, world!
+
+    >>> from pkg_template.module import get_dataframe
+    >>> get_dataframe((2, 3))
+       a  b  c
+    0  0  1  2
+    1  3  4  5
+
 
 .. _ExoMol: https://www.exomol.com/
 .. _GitHub: https://github.com/hanicinecm/template-python-package

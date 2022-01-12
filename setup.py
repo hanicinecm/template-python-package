@@ -34,7 +34,7 @@ setup(
     packages=find_packages(where="src"),
     python_requires=">=3.9",
     install_requires=[
-        "pandas",
+        "pandas>=1.3.4",
     ],
     extras_require={
         "dev": ["pytest-cov", "tox", "black", "ipython"],
