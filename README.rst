@@ -2,7 +2,30 @@
 Template Python Package
 ***********************
 
-Some description of the template itself.
+Description of the Repository:
+==============================
+
+This is a simple template for a python package development repository. The project
+defines ``setup.py`` and ``pyproject.toml`` with all the standard configuration one
+might want for a python package development, such as unit testing with ``pytest``
+(including docstring and documentation testing and coverage), code formatting by
+``black`` and testing on a matrix of python versions and dependency versions powered
+by ``tox``.
+
+The package source code is structured in the ``src`` directory, which means that
+the package needs to be ``pip installed`` to run tests and development, which appears
+to be an agreed upon best practice for package development.
+
+A full CI/CD pipeline is implemented via *GitHub Actions*, which performs on any push
+to ``master`` branch the following:
+
+* Check if the project code is ``black``-formatted.
+* Run all the tests with ``pytest`` and ``tox`` on a matrix of supported python versions
+  and dependency versions.
+* If the commit is tagged, publish the package to PyPI
+  * TestPyPI is used in this template.
+  * The package only gets published if ``twine check dist/*`` executes successfully.
+  * The package only gets published if tests run successfully and the code is formatted.
 
 
 README Template:
