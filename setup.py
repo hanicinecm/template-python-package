@@ -37,7 +37,7 @@ setup(
         "pandas>=1.3.4",
     ],
     extras_require={
-        "dev": ["pytest-cov", "tox", "black", "ipython"],
+        "dev": ["pytest-cov", "tox", "black"],
     },
     project_urls={
         "Bug Reports": "https://github.com/hanicinecm/template-python-package/issues",

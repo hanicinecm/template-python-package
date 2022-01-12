@@ -37,12 +37,12 @@ installed into the virtual environment in the editable mode by running
 
 
 The ``[dev]`` extra installs (apart from the package dependencies) also several
-development-related packages, such as ``pytest``, ``black``, ``tox`` or ``ipython.``
+development-related packages, such as ``pytest``, ``black``, or ``tox``.
 The tests can then be executed by running (from the project root directory)
 
 .. code-block:: bash
 
-    pytest --cov --doctest-modules
+    pytest --cov
 
 
 The project does not have the ``requirements.txt`` file by design, as all the package
