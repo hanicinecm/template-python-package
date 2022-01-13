@@ -1,4 +1,4 @@
-name: Check formatting and run unit tests
+name: Package CI/CD
 
 on:
   push:
@@ -22,9 +22,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install .
         pip install black pytest-cov
-    - name: Format with black
-      run: |
-        black --check .
     - name: Test with pytest
       run: |
         pytest --cov
+    - name: Check format with black
+      run: |
+        black --check .
