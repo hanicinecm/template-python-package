@@ -17,16 +17,16 @@ The package source code is structured in the ``src`` directory, which means that
 the package needs to be ``pip installed`` to run tests and development, which appears
 to be an agreed upon best practice for package development.
 
-A full CI/CD pipeline is implemented via *GitHub Actions*, which performs on any push
-to ``master`` branch the following:
+A full CI/CD pipeline is implemented via *GitHub Actions*. On any push to ``master``,
+GitHub actions:
 
-* Check if the project code is ``black``-formatted.
 * Run all the tests with ``pytest`` and ``tox`` on a matrix of supported python versions
   and dependency versions.
-* If the commit is tagged, publish the package to PyPI.
-* TestPyPI is used in this template.
-* The package only gets published if ``twine check dist/*`` executes successfully.
-* The package only gets published if tests run successfully and the code is formatted.
+* Check if the project code is ``black``-formatted.
+
+On any GitHub *release*, actions:
+
+* Publish the package to PyPI.
 
 
 README Template:
