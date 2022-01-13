@@ -8,7 +8,7 @@ long_description = (root / "README.rst").read_text(encoding="utf-8")
 
 setup(
     name="pkg-template-mh",
-    version="1.1.0",
+    version="1.1.2",
     description="Python package template with Github Actions CI/CD",
     long_description=long_description,
     long_description_content_type="text/x-rst",
