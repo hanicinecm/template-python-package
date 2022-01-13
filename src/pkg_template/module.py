@@ -10,7 +10,7 @@ Examples:
     >>> df
        a  b
     0  0  1
-    1  2  3
+    1  2  4
 """
 
 import numpy as np
@@ -28,7 +28,7 @@ def get_columns(n: int) -> list[str]:
     Returns:
         list of str letters starting with "a" and of length n.
     """
-    return list("abcdefghijklmnopqrstuvwxyz"[:n])
+    return list('abcdefghijklmnopqrstuvwxyz'[:n])
 
 
 def get_dataframe(shape: tuple[int, int]) -> pd.DataFrame:
