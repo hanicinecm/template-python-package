@@ -10,7 +10,7 @@ Examples:
     >>> df
        a  b
     0  0  1
-    1  2  4
+    1  2  3
 """
 
 import numpy as np
