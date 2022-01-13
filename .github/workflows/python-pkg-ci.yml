@@ -37,6 +37,8 @@ jobs:
         twine check dist/*
     - name: Publish the distribution to Test PyPI
       if: startsWith(github.ref, 'refs/tags')
-      uses: pypa/gh-action-pypi-publish@master
+      uses: pypa/gh-action-pypi-publish@release/v1
       with:
+        user: __token__
         password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        verbose: true
