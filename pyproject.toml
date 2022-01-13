@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=43", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --doctest-glob='README.rst'"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py3{10,9}-pandas_{high,low}
+skip_missing_interpreters = true
+
+[testenv]
+deps =
+    pytest
+    pandas_low: pandas==1.3.4
+    pandas_high: pandas
+commands = pytest
+"""
+
+[tool.coverage.run]
+omit = ["tests/*", "src/pkg_template/__init__.py"]
+
+[tool.coverage.html]
+directory = "htmlcov"
