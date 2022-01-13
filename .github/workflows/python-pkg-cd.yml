@@ -20,8 +20,9 @@ jobs:
         pip install --upgrade build
         pip install --upgrade twine
     - name: Build package
-      python -m build --outdir dist/
-      twine check dist/*
+      run: |
+        python -m build --outdir dist/
+        twine check dist/*
     - name: Publish package
       uses: pypa/gh-action-pypi-publish@master
       with:
